@@ -2,8 +2,8 @@ import { CommentInfo } from '../CommentInfo/CommentInfo';
 
 export const CommentList = ({ comments }) => (
   <div className="CommentList">
-    {comments.lengh === 0 ? (
-      comments.map(coment => <CommentInfo key={coment.id} coment={coment} />)
+    {comments.length > 0 ? (
+      comments.map(comment => <CommentInfo coment={comment} key={comment.id} />)
     ) : (
       <b data-cy="NoCommentsMessage">No comments yet</b>
     )}
